@@ -1,26 +1,22 @@
-<div class="card-container">
-    <div class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcswF7Z1qugjUCPLZit6IRPxL7UVYbVoQNfA&s" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">golf gti</h5>
-            <p class="card-text">El Volkswagen Golf GTI es un auto deportivo compacto con un motor turboalimentado. </p>
-            <a href="#" class="btn btn-primary">adquirir</a>
-        </div>
-    </div>
-    <div class="card">
-        <img src="https://www.autonocion.com/wp-content/uploads/2022/11/Mercedes-AMG-G63-P900-0.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">mercedes amg clase g63</h5>
-            <p class="card-text">En el corazón del Mercedes AMG G63 se encuentra un potente motor V8 Biturbo de 4.0 litros, capaz de generar hasta 585 hp y 850 Nm de torque. Esta sorprendente capacidad de motor le permite acelerar de 0 a 100 km/h en tan solo 4.5 segundos, combinando agilidad con la potencia necesaria para todo terreno.</p>
-            <a href="#" class="btn btn-primary">adquirir</a>
-        </div>
-    </div>
-    <div class="card">
-        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Camry/11344/1733916451269/front-left-side-47.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">corolla Camry</h5>
-            <p class="card-text">El Toyota Camry es un auto sedán que viene en diferentes versiones, incluyendo híbrida, con motores de 4 cilindros o V6, y con tracción delantera o en las cuatro ruedas.  </p>
-            <a href="#" class="btn btn-primary">adquirir</a>
-        </div>
-    </div>
+<!--<div *ngFor="let producto of productos; let i = index">
+    <p>{{ i + 1}}. nombre: {{producto.nombre}}</p>|
+    <p>Precio: {{ producto.precio }}</p>
+</div>  
+
+<div *ngIf="usuario.isLoggedIn">
+    <p>Bienvenido, {{ usuario.nombre }}</p>
 </div>
+<div *ngIf="!usuario.isLoggedIn">
+    <p>por favor, inicia sesion.</p>
+</div>
+
+<div [ngClass]="{'activo': usuario.activo, 'inactivo': !usuario.activo}">
+    {{usuario.nombre}}
+</div>-->
+
+<form>
+    <label for="nombre">nombre:</label>
+    <input id="nombre" [(ngModel)]="usuario.nombre" name="nombre" required>
+    
+    <button [disabled]="!usuario.nombre">enviar</button>
+</form>
