@@ -12,11 +12,24 @@
 
 <div [ngClass]="{'activo': usuario.activo, 'inactivo': !usuario.activo}">
     {{usuario.nombre}}
-</div>-->
+</div>
 
 <form>
     <label for="nombre">nombre:</label>
     <input id="nombre" [(ngModel)]="usuario.nombre" name="nombre" required>
     
     <button [disabled]="!usuario.nombre">enviar</button>
-</form>
+</form>-->
+
+<div *ngFor="let producto of productos; let i = index">
+    <p>{{ i + 1}}.imagen: {{producto.img}}</p>|
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+     <p>Precio: {{ producto.precio }}</p>
+</div>  

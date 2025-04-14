@@ -1,12 +1,21 @@
 import { Routes } from '@angular/router';
-import path from 'path';
-import { InicioComponent } from './inicio/inicio/inicio.component';
-import { FormularioComponent } from './contacto/formulario/formulario.component';
-import { ProductoComponent } from './productos/producto/producto.component';
+import { HomeComponent } from './paginas/home/home.component';
+import { ContactosComponent } from './paginas/contactos/contactos.component';
+import { ProductoComponent } from './paginas/producto/producto.component';
+import { OfertasComponent } from './paginas/ofertas/ofertas.component';
+import { CarritoComponent } from './paginas/carrito/carrito.component';
+import { QuienessomosComponent } from './paginas/quienessomos/quienessomos.component';
 
 export const routes: Routes = [
-    {path: '',redirectTo:'/inicio',pathMatch:'full'},
-    {path:'inicio', component:InicioComponent},
-    {path:'contacto',component:FormularioComponent},
-    {path:'productos',component:ProductoComponent}
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
+    { path: 'contacto', component: ContactosComponent },
+    { path: 'productos', component: ProductoComponent },
+    { path: 'ofertas', component: OfertasComponent },
+    { path: 'carrito', component: CarritoComponent },
+    { path: 'quienes somos', component: QuienessomosComponent },
+
+
+    
+
 ];
